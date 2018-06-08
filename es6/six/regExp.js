@@ -3,7 +3,7 @@ const hasLengthOf10 = {
         return value.length===10 ? value :null
     },
     [Symbol.replace]:function(value,replacement){
-        return value.length===10 ? replacement :value
+        return replacement
     },
     [Symbol.search]:function(value){
         return value.length===10 ? 0 :-1
