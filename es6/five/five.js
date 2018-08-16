@@ -1,4 +1,3 @@
-
 /* const node = {
     type: 'Identifier',
     name: 'foo',
@@ -81,10 +80,20 @@ setCookie('type','js',{
     secure:true,
     expires:60000
 }) */
-function setCookie(name,value,{secure,path,domain,expires}){
-    
+function setCookie(name, value, {
+    secure=false,
+    path='/',
+    domain='example.com',
+    expires = new Date(Date.now() + 36000000)
+} = {
+    secure: false,
+    path: '/',
+    domain: 'example.com',
+    expires: new Date(Date.now() + 36000000)
+}) {
+    console.log(name,value)
 }
-setCookie('type','js',{
-    secure:true,
-    expires:60000
+setCookie('type', 'js', {
+    secure: true,
+    expires: 60000
 })
